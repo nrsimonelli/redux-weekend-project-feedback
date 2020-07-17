@@ -25,6 +25,7 @@ Description:
 ## Technologies Used
 
 -   React
+-   Redux
 -   Axios
 -   Postgres
 -   Express
