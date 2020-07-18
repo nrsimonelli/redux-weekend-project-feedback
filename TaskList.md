@@ -44,3 +44,6 @@
 - [ ] set button color
 - [ ] set text color
 - [ ] fix button position
+
+## On Submit ##
+- [ ] POST request to send data to database

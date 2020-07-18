@@ -5,16 +5,23 @@ import {connect} from 'react-redux';
 
 class Feeling extends Component {
 
+  state = {
+    currentFeedback: {feeling: '', understanding: '', support: '', comments: ''}
+   
+  }
+
   continueClicked = () =>{
-    // takes you to understanding
+    // takes you to next page (understanding)
     console.log('continue was clicked');
     this.props.history.push('/understanding');
   } // end continueClicked
 
-  radioNow = () =>{
-    console.log('in radio now');
-    
-    
+  radioNow = (event) =>{
+    console.log('in radio now with value: ', event.target.value);
+    this.setState({
+      ...this.state.currentFeedback,
+      feeling: event.target.value
+    })
   }
 
   render() {
