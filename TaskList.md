@@ -26,4 +26,21 @@
 - [x] test all routes
 - [x] commit and comment
 
+## Form ##
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+
 ## Redux ##
+- [ ] npm install
+- [ ] import store
+- [ ] import provider
+
+## CSS ##
+- [ ] decide on color pallet
+- [ ] set primary colors
+- [ ] set secondary colors
+- [ ] set button color
+- [ ] set text color
+- [ ] fix button position

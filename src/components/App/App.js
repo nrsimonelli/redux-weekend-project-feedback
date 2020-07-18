@@ -14,15 +14,12 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
+      <div className="theme">
+        <header className="header">
+          <h1 className="title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
-        <br/>
-        
           <Router>
-            <main>
               <Route exact path="/" component={Start} />
               <Route path="/feeling" component={Feeling} />
               <Route path="/understanding" component={Understanding} />
@@ -30,13 +27,7 @@ class App extends Component {
               <Route path="/add_comment" component={Add_Comment} />
               <Route path="/review" component={Review} />
               <Route path="/thanks" component={Thank_You} />
-            </main>
           </Router>
-       
-
-
-
-
       </div>
     );
   }

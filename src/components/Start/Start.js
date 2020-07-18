@@ -13,15 +13,22 @@ class Start extends Component {
   render() {
     return (
       <div>
-        <h1>Start</h1>
-        <main>
-          <section className='formInfo'>
-            <h3>are you ready?</h3>
-          </section>
-          <section className='nextPath'>
-            <button onClick={this.startClicked} id='nextInStart'>Start!</button>
-          </section>
-        </main>
+        <div className='left'>
+          <h1 className='leftTitle'>Start</h1>
+          <h3 className='leftSub'>are you ready?</h3>
+        </div>
+        <div className='wrap'>
+          <div className='inWrap'>
+            <h1>Let's Go</h1>
+            <p>question 2</p>
+            <p>question 3</p>
+          </div>
+          <div className='nextPath'>
+            <button className='cont' onClick={this.startClicked} id='nextInStart'>Start!</button>
+          </div>
+        </div>  
+          
+       
       </div>
     ); // end return
   } // end render

@@ -1,19 +1,98 @@
-.App {
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+}
+
+.theme {
+  --primary:#ff6b6b;
+  --secondary: #ffe66d;
+  --highlight: #4ECDC4;
+  --dark: #1A535C;
+  --light: #f7fff7;
+}
+
+/* for app.js */
+.header{
+  float: left;
+  width: 100%;
+  height: 33vh;
+  background-color: var(--primary);
+  position: relative;
   text-align: center;
+
+  
+  
+}
+.title{
+  margin-top: 15vh;
 }
 
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
+/* for each component form */
+.wrap{
+  float: right;
+  width: 75%;
+  height: 100vh;
+  background-color: var(--light);
+}
+.inWrap{
+  text-align: center;
+  margin-top: 9%;
+  line-height: 2.5;
+	
+
 }
 
-.App-title {
-  font-size: 1.5em;
+/* for each component header (left) */
+.left{
+  float: left;
+  width: 25%;
+  min-width: 200px;
+  margin-left: -100%;
+  height: 100%;
+  position: relative;
+  top: 33vh;
+  min-height: 100vh;
+  
+
+  background-color: var(--dark);
+  color: var(--light);
+}
+.leftTitle{
+  margin-top: 20%;
+  padding-left: 6%;
+}
+.leftSub{
+  padding-left: 6%;
+  margin-top: 33%;
+  font-style: italic;
 }
 
-.App-intro {
-  font-size: large;
+
+/* button location and style */
+.nextPath{
+  float: right;
+  position: relative;
+  margin-right: 6%;
+  margin-top: 25vh;
+  
 }
+.cont{
+  position: relative;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--highlight);
+  padding: 6px 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
