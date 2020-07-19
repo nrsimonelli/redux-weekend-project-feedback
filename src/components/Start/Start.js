@@ -15,7 +15,8 @@ class Start extends Component {
       <div>
         <div className='left'>
           <h1 className='leftTitle'>Start</h1>
-          <h3 className='leftSub'>everything starts at the beginning</h3>
+          <h3 className='leftSub'>"How can a train be lost? It's on rails!"</h3>
+          <h4 className='leftSub'>- Wes Anderson</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>

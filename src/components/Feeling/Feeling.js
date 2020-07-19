@@ -34,7 +34,8 @@ class Feeling extends Component {
       <div>
         <div className='left'>
           <h1 className='leftTitle'>Feeling</h1>
-          <h3 className='leftSub'>emotions play an important role in the learning process</h3>
+          <h3 className='leftSub'>"Emotions make us human. Denying them makes us beasts"</h3>
+          <h4 className='leftSub'>- Victoria Klein</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>

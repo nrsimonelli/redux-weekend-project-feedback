@@ -37,7 +37,7 @@ class Understanding extends Component {
         </div>
         <div className='wrap'>
           <div className='inWrap'>
-            <h1>How well did you understand today's material?</h1>
+            <h1>How well did you comprehend today's material?</h1>
             <br></br>
             <div>
               <input onChange={this.radioNow} type='radio' name='und' id='1' value='1'/>

@@ -34,11 +34,12 @@ class Add_Comment extends Component {
       <div>
         <div className='left'>
           <h1 className='leftTitle'>Comments</h1>
-          <h3 className='leftSub'>if I had 53 minutes to spend as I liked I'd walk very slowly toward a water fountain</h3>
+          <h3 className='leftSub'>"If I had 53 minutes to spend as I liked I'd walk very slowly toward a water fountain"</h3>
+          <h4 className='leftSub'>- Antoine de Saint-Exupéry</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
-            <h1>Anything noteworthy about today?</h1>
+            <h1>Anything on your mind?</h1>
             <br></br>
             <div>
               <input onChange={this.commentNow} name='comment' id='comment' type='text'/>
