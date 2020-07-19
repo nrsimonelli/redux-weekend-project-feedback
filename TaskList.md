@@ -15,7 +15,9 @@
     - [x] review
 - [x] commit code
 
-## <Routes /> ##
+
+## <Routes /> 
+
 - [x] Outline routes in app.js
 - [x] definte path names for each component
 - [x] import each component
@@ -26,14 +28,18 @@
 - [x] test all routes
 - [x] commit and comment
 
-## Form ##
+
+## Form
+
 - [x] radio buttons
-- [ ] css for spacing
+- [x] css for spacing
 - [x] assign values
 - [x] comment section 
 - [x] data validation
 
-## Redux Setup ##
+
+## Redux Setup 
+
 - [x] npm install
 - [x] logger
 - [x] import store
@@ -41,28 +47,37 @@
 - [x] create store instance
 - [x] combine reducers
 
-## CSS ##
+
+## CSS 
+
 - [x] decide on color pallet
 - [x] set primary colors
 - [x] set secondary colors
 - [x] set button color
 - [x] set text color
-- [ ] fix button position
+- [x] fix button position
 
-## On Submit ##
-- [ ] POST request to send feedback to database
+
+## On Submit 
+
+- [x] POST request to send feedback to database
 - [x] Review page has entire feedback laid out
-- [ ] write express routes from server to router to db
-- [ ] action to clear form
+- [x] write express routes from server to router to db
+- [x] action to clear form
 
-## page handlers ##
+
+## page handlers 
+
 - [x] state updated on change
 - [x] results dispatched to 'global state'
 - [x] button disabled till information entered 
+- [x] added back buttons
 
-## Express Routes ##
-- [ ] write path in server.js
-- [ ] create appropriate router.js
-- [ ] write sql syntax for post
-- [ ] confirm post request completion
-- [ ] examine stretch goals
+
+## Express Routes 
+
+- [x] write path in server.js
+- [x] create appropriate router.js
+- [x] write sql syntax for post
+- [x] confirm post request completion
+- [-] examine stretch goals
