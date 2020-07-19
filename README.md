@@ -10,9 +10,9 @@ With more time I would like to create an admin page where you would be able to v
 
 ## Screen Shots
 
-![Screenshot](images/beginning.png)
-![Screenshot](images/middle.png)
-![Screenshot](images/end.png)
+![Start Screen](public/images/beginning.png)
+![Example Question](public/images/middle.png)
+![End Screen](public/images/end.png)
 
 ## Installation
 
