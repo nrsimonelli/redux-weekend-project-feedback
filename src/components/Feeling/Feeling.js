@@ -16,7 +16,7 @@ class Feeling extends Component {
     // pushes form info up to redux
     this.props.dispatch({
       type: 'SET_FEEDBACK',
-      payload: this.state
+      payload: this.state.feeling
     });
     // takes you to next page (understanding)
     this.props.history.push('/understanding');

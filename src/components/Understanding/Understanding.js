@@ -15,7 +15,7 @@ class Understanding extends Component {
     // pushes understanding value up to redux
     this.props.dispatch({
       type: 'SET_FEEDBACK',
-      payload: this.state
+      payload: this.state.understanding
     });
     // takes you to support component
     this.props.history.push('/support');

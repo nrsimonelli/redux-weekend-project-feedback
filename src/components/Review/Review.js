@@ -16,9 +16,6 @@ class Review extends Component {
     console.log('review did mount');
     console.log('redux state:', this.props.reduxState);
     
-  
-    
-    
   }
 
   submitClicked = (event) =>{
@@ -40,15 +37,14 @@ class Review extends Component {
           <div className='inWrap'>
             <h1>Let's Review Your Feedback</h1>
             <br></br>
-            <div>{this.props.reduxState.feedbackReducer.map((taco, i)=>{
-                return (
-                  <p> key={i}
-                    {taco.feeling}
-                    {taco.understanding}
-                  </p>
-                );
-            })}
-            </div>
+            <p>{JSON.stringify(this.props.reduxState)}</p>
+            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[0])}</p>
+            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[1])}</p>
+            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[2])}</p>
+            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[3])}</p>
+
+
+
             
           </div>
           <div className='nextPath'>
@@ -61,7 +57,7 @@ class Review extends Component {
 } // end class
 
 const putReduxStateOnProps =(reduxState)=>({
-  reduxState: reduxState
+  reduxState
 })
 
 export default connect(putReduxStateOnProps)(Review);

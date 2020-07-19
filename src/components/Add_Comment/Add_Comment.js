@@ -16,7 +16,7 @@ class Add_Comment extends Component {
     // dispatch value to redux
     this.props.dispatch({
       type: 'SET_FEEDBACK',
-      payload: this.state
+      payload: this.state.comments
     });
     // takes you to the review page
     this.props.history.push('/review');

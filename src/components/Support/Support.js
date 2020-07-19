@@ -16,7 +16,7 @@ class Support extends Component {
     // pushes support value up to redux
     this.props.dispatch({
       type: 'SET_FEEDBACK',
-      payload: this.state
+      payload: this.state.support
     });
     // takes you to comments
     this.props.history.push('/add_comment');
