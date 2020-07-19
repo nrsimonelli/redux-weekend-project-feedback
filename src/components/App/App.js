@@ -15,11 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="theme">
-        <header className="header">
-          <h1 className="title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-          
-        </header>
+        
           <Router>
               <Route exact path="/" component={Start} />
               <Route path="/feeling" component={Feeling} />

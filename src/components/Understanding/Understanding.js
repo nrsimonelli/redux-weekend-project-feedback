@@ -30,10 +30,15 @@ class Understanding extends Component {
 
   render() {
     return (
-      <div>
-        <div className='left'>
+      <div className='theme'>
+          <header className='header' id='secondary'>
+            <h1 className='title'>Feedback</h1>
+            <h4><i>Part ii</i></h4>
+          </header>
+        <div className='left' id='primary'>
           <h1 className='leftTitle'>Understanding</h1>
-          <h3 className='leftSub'>the noblest pleasure is the joy of understanding</h3>
+          <h3 className='leftSub'>"When you come out of the storm, you won’t be the same person who walked in. That’s what this storm’s all about."</h3>
+          <h4 className='leftSub'>&mdash; Haruki Murakami</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
@@ -51,7 +56,7 @@ class Understanding extends Component {
             </div>
           </div>
           <div className='nextPath'>
-            <button className='cont' onClick={this.continueClicked} id='continueInUnderstanding' disabled={this.state.understanding === ''}>Continue</button>
+            <button className='cont' onClick={this.continueClicked} id='continueInUnderstanding' hidden={this.state.understanding === ''} disabled={this.state.understanding === ''}>Continue</button>
           </div>
         </div>
       </div>

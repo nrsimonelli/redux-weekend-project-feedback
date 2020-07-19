@@ -27,11 +27,11 @@
 - [x] commit and comment
 
 ## Form ##
-- [ ] radio buttons
+- [x] radio buttons
 - [ ] css for spacing
-- [ ] assign values
-- [ ] comment section 
-- [ ] data validation
+- [x] assign values
+- [x] comment section 
+- [x] data validation
 
 ## Redux Setup ##
 - [x] npm install
@@ -51,10 +51,18 @@
 
 ## On Submit ##
 - [ ] POST request to send feedback to database
-- [ ] Review page has entire feedback laid out
+- [x] Review page has entire feedback laid out
 - [ ] write express routes from server to router to db
+- [ ] action to clear form
 
 ## page handlers ##
-- [ ] state updated on change
-- [ ] results dispatched to 'global state'
-- [ ] button disabled till information entered 
+- [x] state updated on change
+- [x] results dispatched to 'global state'
+- [x] button disabled till information entered 
+
+## Express Routes ##
+- [ ] write path in server.js
+- [ ] create appropriate router.js
+- [ ] write sql syntax for post
+- [ ] confirm post request completion
+- [ ] examine stretch goals

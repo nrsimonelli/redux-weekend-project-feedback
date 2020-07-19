@@ -31,23 +31,34 @@ class Add_Comment extends Component {
 
   render() {
     return (
-      <div>
-        <div className='left'>
+      <div className='theme'>
+          <header className='header' id='dark'>
+            <h1 className='title'>Feedback</h1>
+            <h4><i>Part iv</i></h4>
+          </header>
+        <div className='left' id='secondary'>
           <h1 className='leftTitle'>Comments</h1>
           <h3 className='leftSub'>"If I had 53 minutes to spend as I liked I'd walk very slowly toward a water fountain"</h3>
-          <h4 className='leftSub'>- Antoine de Saint-Exupéry</h4>
+          <h4 className='leftSub'>&mdash; Antoine de Saint-Exupéry</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
             <h1>Anything on your mind?</h1>
             <br></br>
             <div>
-              <input onChange={this.commentNow} name='comment' id='comment' type='text'/>
-              <label for='comment'>Comment Box</label>
+              <textarea className='commentBox' onChange={this.commentNow} name='comment' id='comment' type='text'></textarea>
+             
             </div>
           </div>
           <div className='nextPath'>
-            <button className='cont' onClick={this.reviewClicked} id='continueInAdd_Comment'>Continue</button>
+
+            {this.state.comments === '' 
+              ? 
+                <button className='contDark' onClick={this.reviewClicked} id='continueInAdd_Comment'>Not Today</button>
+              :
+                <button className='contLight' onClick={this.reviewClicked} id='continueInAdd_Comment'>Yes!</button>
+            }
+            
           </div>
         </div>
       </div>

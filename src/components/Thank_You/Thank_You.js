@@ -12,16 +12,27 @@ class Thank_You extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Thanks</h1>
-        <main>
-          <section className='formInfo'>
-            <h3>Thank you!</h3>
-          </section>
-          <section className='nextPath'>
-            <button onClick={this.returnClicked} id='returnInThankYou'>Return Home</button>
-          </section>
-        </main>
+      <div className='theme'>
+        <header className='header' id='highlight'>
+          <h1 className='title'>Feedback</h1>
+          <p id='finale'>~</p>
+        </header>
+        <div className='left' id='dark'>
+          <h1 className='leftTitle'>Fin</h1>
+            <h3 className='leftSub'>"All of this happened, more or less"</h3>
+            <h4 className='leftSub'>&mdash; Kurt Vonnegut</h4>
+          </div>
+          <div className='wrap'>
+            <div className='inWrap'>
+              <h1>Thank You!</h1>
+              <br></br>
+              <p><i>See you again soon</i></p>
+            </div>
+            <div className='nextPath'>
+              <button className='cont' onClick={this.returnClicked} id='returnInThankYou'>Return Home</button>
+            </div>
+          </div>
+       
       </div>
     ); // end return
   } // end render

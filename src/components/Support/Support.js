@@ -31,10 +31,15 @@ class Support extends Component {
 
   render() {
     return (
-      <div>
-        <div className='left'>
+      <div className='theme'>
+          <header className='header' id='primary'>
+            <h1 className='title'>Feedback</h1>
+            <h4><i>Part iii</i></h4>
+          </header>
+        <div className='left' id='dark'>
           <h1 className='leftTitle'>Support</h1>
           <h3 className='leftSub'>The strength of the team is each individual member. The strength of each member is the team</h3>
+          <h4 className='leftSub'>&mdash; Phil Jackson</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
@@ -52,7 +57,7 @@ class Support extends Component {
             </div>
           </div>
           <div className='nextPath'>
-            <button className='cont' onClick={this.continueClicked} id='continueInSupport' disabled={this.state.support === ''}>Continue</button>
+            <button className='cont' onClick={this.continueClicked} id='continueInSupport' hidden={this.state.support === ''} disabled={this.state.support === ''}>Continue</button>
           </div>
         </div>
       </div>

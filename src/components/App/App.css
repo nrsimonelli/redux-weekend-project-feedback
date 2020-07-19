@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:  'Lato', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   
 }
 
@@ -11,7 +11,7 @@ body {
   --light: #f7fff7;
 }
 
-/* for app.js */
+/* global formatting via classes */
 .header{
   float: left;
   width: 100%;
@@ -19,13 +19,13 @@ body {
   background-color: var(--primary);
   position: relative;
   text-align: center;
-
-  
+  line-height: 1.4;
   
 }
 .title{
-  margin-top: 15vh;
+  margin-top: 11vh;
 }
+
 
 /* for each component form */
 .wrap{
@@ -89,9 +89,62 @@ body {
   padding: 6px 15px;
 
 }
+.contLight{
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--secondary);
+  padding: 6px 15px;
+}
+.contDark{
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 6px 15px;
+}
 
+/* for comment box */
+.commentBox{
+  font-style: italic;
+  width: 40%;
+  height: 100px;
+  padding: 10px;
+  background-color: var(--light);
+  
+}
 
+/* for review section */
+.inReview{
+  line-height: 1.4;
+  font-style: italic;
 
+}
+
+/* ID override aesthetics for each page */
+#primary{
+  background-color: var(--primary);
+  color: var(--light);
+}
+#secondary{
+  background-color: var(--secondary);
+  color: black;
+}
+#highlight{
+  background-color: var(--highlight);
+  color: black;
+}
+#dark{
+  background-color: var(--dark);
+  color: var(--light);
+}
+#light{
+  background-color: var(--light);
+  color: black;
+}
+#finale{
+  font-weight: 32px;
+  font-size: 24px;
+}
 
 
 

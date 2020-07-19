@@ -12,16 +12,21 @@ class Start extends Component {
 
   render() {
     return (
-      <div>
-        <div className='left'>
+      <div className='theme'>
+          <header className='header' id='dark'>
+            <h1 className='title'>Feedback</h1>
+            <h4><i>Don't forget it!</i></h4>
+          </header>
+        
+        <div className='left' id='highlight'>
           <h1 className='leftTitle'>Start</h1>
           <h3 className='leftSub'>"How can a train be lost? It's on rails!"</h3>
-          <h4 className='leftSub'>- Wes Anderson</h4>
+          <h4 className='leftSub'>&mdash; Wes Anderson</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
             <h1>Welcome To The Daily Feedback Form</h1>
-            <h4><i>press start to begin</i></h4>
+            <h4><i>Press start to begin</i></h4>
             
           </div>
           <div className='nextPath'>

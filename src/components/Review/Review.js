@@ -27,25 +27,26 @@ class Review extends Component {
 
   render() {
     return (
-      <div>
-        <div className='left'>
+      <div className='theme'>
+          <header className='header' id='secondary'>
+            <h1 className='title'>Feedback</h1>
+            <h4><i>Part v</i></h4>
+          </header>
+        <div className='left' id='highlight'>
           <h1 className='leftTitle'>Review</h1>
           <h3 className='leftSub'>"As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a monstrous vermin"</h3>
-          <h4 className='leftSub'>- Franz Kafka</h4>
+          <h4 className='leftSub'>&mdash; Franz Kafka</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
             <h1>Let's Review Your Feedback</h1>
             <br></br>
-            <p>{JSON.stringify(this.props.reduxState)}</p>
-            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[0])}</p>
-            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[1])}</p>
-            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[2])}</p>
-            <p>{JSON.stringify(this.props.reduxState.feedbackReducer[3])}</p>
-
-
-
-            
+            <div className='inReview'>
+              <p>Feeling: {this.props.reduxState.feedbackReducer[0]}</p>
+              <p>Understanding: {this.props.reduxState.feedbackReducer[1]}</p>
+              <p>Support: {this.props.reduxState.feedbackReducer[2]}</p>
+              <p>Comments: {this.props.reduxState.feedbackReducer[3]}</p>
+            </div>
           </div>
           <div className='nextPath'>
             <button onClick={this.submitClicked} id='submitInReview' className='cont'>Submit</button>

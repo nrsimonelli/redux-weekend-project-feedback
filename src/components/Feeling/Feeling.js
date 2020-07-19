@@ -31,11 +31,15 @@ class Feeling extends Component {
 
   render() {
     return (
-      <div>
-        <div className='left'>
+      <div className='theme'>
+          <header className='header' id='highlight'>
+            <h1 className='title'>Feedback</h1>
+            <h4><i>Part i</i></h4>
+          </header>
+        <div className='left' id='secondary'>
           <h1 className='leftTitle'>Feeling</h1>
           <h3 className='leftSub'>"Emotions make us human. Denying them makes us beasts"</h3>
-          <h4 className='leftSub'>- Victoria Klein</h4>
+          <h4 className='leftSub'>&mdash; Victoria Klein</h4>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
@@ -43,17 +47,17 @@ class Feeling extends Component {
             <br></br>
             <div>
               <input onChange={this.radioNow} type='radio' name='feel' id='1' value='1'/>
-              <label for='1'>No Energy</label>
+              <label >No Energy</label>
               <input onChange={this.radioNow} type='radio' name='feel' id='2' value='2'/>
               <input onChange={this.radioNow} type='radio' name='feel' id='3' value='3'/>
               <input onChange={this.radioNow} type='radio' name='feel' id='4' value='4'/>
               <input onChange={this.radioNow} type='radio' name='feel' id='5' value='5'/>
               <input onChange={this.radioNow} type='radio' name='feel' id='6' value='6'/>
-              <label for='6'>Electric</label>
+              <label >Electric</label>
             </div>
           </div>
           <div className='nextPath'>
-            <button className='cont' onClick={this.continueClicked} id='continueInFeeling' disabled={this.state.feeling === ''}>Continue</button>
+            <button className='cont' onClick={this.continueClicked} id='continueInFeeling' hidden={this.state.feeling === ''} disabled={this.state.feeling === ''}>Continue</button>
           </div>
         </div>
       </div>
