@@ -14,7 +14,13 @@ const feedbackReducer = ( state = [], action ) => {
         console.log('in feedback reducer', action.payload);
         
         return [...state, action.payload]
+    } 
+    if (action.type === 'CLEAR_FEEDBACK') {
+        console.log('clearing feedback now');
+        
+        return []
     }
+    
     return state;
 }
 

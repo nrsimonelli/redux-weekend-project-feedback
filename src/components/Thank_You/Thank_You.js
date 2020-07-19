@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 
 
 class Thank_You extends Component {
@@ -7,6 +8,10 @@ class Thank_You extends Component {
   returnClicked = () =>{
     // takes you to the review page
     console.log('return was clicked');
+    // clearing feedback
+    this.props.dispatch({
+      type: 'CLEAR_FEEDBACK'
+    });
     this.props.history.push('/');
   } // end reviewClicked
 
@@ -38,4 +43,8 @@ class Thank_You extends Component {
   } // end render
 } // end class
 
-export default Thank_You;
+const putReduxStateOnProps =(reduxState)=>({
+  reduxState
+})
+
+export default connect(putReduxStateOnProps)(Thank_You);

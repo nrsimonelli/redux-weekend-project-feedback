@@ -47,13 +47,13 @@ class Support extends Component {
             <br></br>
             <div>
               <input onChange={this.radioNow} type='radio' name='support' id='1' value='1'/>
-              <label for='1'>All Alone</label>
+              <label>All Alone</label>
               <input onChange={this.radioNow} type='radio' name='support' id='2' value='2'/>
               <input onChange={this.radioNow} type='radio' name='support' id='3' value='3'/>
               <input onChange={this.radioNow} type='radio' name='support' id='4' value='4'/>
               <input onChange={this.radioNow} type='radio' name='support' id='5' value='5'/>
               <input onChange={this.radioNow} type='radio' name='support' id='6' value='6'/>
-              <label for='6'>Wonderfully So</label>
+              <label>Wonderfully So</label>
             </div>
           </div>
           <div className='nextPath'>

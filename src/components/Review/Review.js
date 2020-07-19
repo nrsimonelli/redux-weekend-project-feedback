@@ -5,24 +5,31 @@ import {connect} from 'react-redux';
 
 class Review extends Component {
 
-  // state = {
-  //   feeling: '',
-  //   understanding: '',
-  //   support: '',
-  //   comments: '',
-  // }
-
   componentDidMount(){
     console.log('review did mount');
-    console.log('redux state:', this.props.reduxState);
+    console.log('redux state:', this.props.reduxState.feedbackReducer);
     
   }
 
+  postFeedback = () => {
+    axios.post('/feedback', this.props.reduxState.feedbackReducer)
+      .then( response => {
+        console.log('feedback made it to DB: ', response);
+      })
+      .catch( err => {
+        console.log('post request err in review: ', err);
+      }) // end axios POST
+  } // end postFeedback
+
   submitClicked = (event) =>{
     event.preventDefault();
-    // takes you to thank you page
     console.log('submit was clicked');
-    this.props.history.push('/thanks');
+
+    this.postFeedback();
+
+
+    // takes you to thankYou page
+    // this.props.history.push('/thanks');
   } // end submitClicked
 
   render() {
