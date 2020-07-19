@@ -21,15 +21,23 @@ class Review extends Component {
       }) // end axios POST
   } // end postFeedback
 
+  backClicked = (event) => {
+    event.preventDefault();
+    console.log('back was clicked');
+    // takes you to previous page
+    this.props.history.push('/add_comment');
+  }
+
   submitClicked = (event) =>{
     event.preventDefault();
     console.log('submit was clicked');
 
+    // fires POST
     this.postFeedback();
 
 
     // takes you to thankYou page
-    // this.props.history.push('/thanks');
+    this.props.history.push('/thanks');
   } // end submitClicked
 
   render() {
@@ -54,6 +62,9 @@ class Review extends Component {
               <p>Support: {this.props.reduxState.feedbackReducer[2]}</p>
               <p>Comments: {this.props.reduxState.feedbackReducer[3]}</p>
             </div>
+          </div>
+          <div className='prevPath'>
+            <button className='contDark' onClick={this.backClicked}>Back</button>
           </div>
           <div className='nextPath'>
             <button onClick={this.submitClicked} id='submitInReview' className='cont'>Submit</button>

@@ -10,6 +10,13 @@ class Add_Comment extends Component {
    
   }
 
+  backClicked = (event) => {
+    event.preventDefault();
+    console.log('back was clicked');
+    // takes you to previous page
+    this.props.history.push('/support');
+  }
+
   reviewClicked = (event) =>{
     event.preventDefault();
     console.log('review was clicked');
@@ -50,11 +57,14 @@ class Add_Comment extends Component {
              
             </div>
           </div>
+          <div className='prevPath'>
+            <button className='contDark' onClick={this.backClicked}>Back</button>
+          </div>
           <div className='nextPath'>
 
             {this.state.comments === '' 
               ? 
-                <button className='contDark' onClick={this.reviewClicked} id='continueInAdd_Comment'>Not Today</button>
+                <button className='contDark' onClick={this.reviewClicked} id='continueInAdd_Comment'>Negative</button>
               :
                 <button className='contLight' onClick={this.reviewClicked} id='continueInAdd_Comment'>Yes!</button>
             }

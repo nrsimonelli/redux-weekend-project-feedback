@@ -10,6 +10,13 @@ class Support extends Component {
    
   }
 
+  backClicked = (event) => {
+    event.preventDefault();
+    console.log('back was clicked');
+    // takes you to previous page
+    this.props.history.push('/understanding');
+  }
+
   continueClicked = (event) =>{
     event.preventDefault();
     console.log('continue was clicked');
@@ -46,15 +53,18 @@ class Support extends Component {
             <h1>Do you feel supported?</h1>
             <br></br>
             <div>
+            <label>I Feel Alone</label>
               <input onChange={this.radioNow} type='radio' name='support' id='1' value='1'/>
-              <label>All Alone</label>
               <input onChange={this.radioNow} type='radio' name='support' id='2' value='2'/>
               <input onChange={this.radioNow} type='radio' name='support' id='3' value='3'/>
               <input onChange={this.radioNow} type='radio' name='support' id='4' value='4'/>
               <input onChange={this.radioNow} type='radio' name='support' id='5' value='5'/>
               <input onChange={this.radioNow} type='radio' name='support' id='6' value='6'/>
-              <label>Wonderfully So</label>
+              <label>Fully Supported</label>
             </div>
+          </div>
+          <div className='prevPath'>
+            <button className='contDark' onClick={this.backClicked}>Back</button>
           </div>
           <div className='nextPath'>
             <button className='cont' onClick={this.continueClicked} id='continueInSupport' hidden={this.state.support === ''} disabled={this.state.support === ''}>Continue</button>

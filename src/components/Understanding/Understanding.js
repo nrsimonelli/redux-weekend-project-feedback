@@ -9,6 +9,13 @@ class Understanding extends Component {
     understanding: ''
   }
 
+  backClicked = (event) => {
+    event.preventDefault();
+    console.log('back was clicked');
+    // takes you to previous page
+    this.props.history.push('/feeling');
+  }
+
   continueClicked = (event) => {
     event.preventDefault();
     console.log('continue was clicked');
@@ -45,8 +52,8 @@ class Understanding extends Component {
             <h1>How well did you comprehend today's material?</h1>
             <br></br>
             <div>
-              <input onChange={this.radioNow} type='radio' name='und' id='1' value='1'/>
               <label>Lost</label>
+              <input onChange={this.radioNow} type='radio' name='und' id='1' value='1'/>
               <input onChange={this.radioNow} type='radio' name='und' id='2' value='2'/>
               <input onChange={this.radioNow} type='radio' name='und' id='3' value='3'/>
               <input onChange={this.radioNow} type='radio' name='und' id='4' value='4'/>
@@ -54,6 +61,9 @@ class Understanding extends Component {
               <input onChange={this.radioNow} type='radio' name='und' id='6' value='6'/>
               <label>On point</label>
             </div>
+          </div>
+          <div className='prevPath'>
+            <button className='contDark' onClick={this.backClicked}>Back</button>
           </div>
           <div className='nextPath'>
             <button className='cont' onClick={this.continueClicked} id='continueInUnderstanding' hidden={this.state.understanding === ''} disabled={this.state.understanding === ''}>Continue</button>

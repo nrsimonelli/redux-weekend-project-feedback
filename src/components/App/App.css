@@ -26,7 +26,6 @@ body {
   margin-top: 11vh;
 }
 
-
 /* for each component form */
 .wrap{
   float: right;
@@ -39,7 +38,6 @@ body {
   margin-top: 9%;
   line-height: 2.5;
 	
-
 }
 
 /* for each component header (left) */
@@ -53,7 +51,6 @@ body {
   top: 33vh;
   min-height: 100vh;
   
-
   background-color: var(--dark);
   color: var(--light);
 }
@@ -70,8 +67,31 @@ body {
   font-size: 20px;
 }
 
+/* radio buttons and labels */
+input{
+  width: 50px;
+  height: 24px;
+  box-shadow: 2px 2px 0px 0px #cccccc;
+
+}
+
+label{
+  position: relative;
+  bottom: -50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-style: italic;
+}
 
 /* button location and style */
+.prevPath{
+  float: right;
+  position: relative;
+  margin-top: 25vh;
+  position: fixed;
+  bottom: 1rem;
+  right: 9rem;
+}
 .nextPath{
   float: right;
   position: relative;
@@ -94,6 +114,7 @@ body {
   font-size: 16px;
   background-color: var(--secondary);
   padding: 6px 15px;
+  width: 98px;
 }
 .contDark{
   border-radius: 4px;
@@ -118,6 +139,9 @@ body {
   line-height: 1.4;
   font-style: italic;
 
+}
+#submitInReview{
+  width: 98px;
 }
 
 /* ID override aesthetics for each page */
@@ -145,13 +169,3 @@ body {
   font-weight: 32px;
   font-size: 24px;
 }
-
-
-
-
-
-
-
-
-
-
