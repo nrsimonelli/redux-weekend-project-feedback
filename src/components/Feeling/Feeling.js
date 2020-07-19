@@ -32,7 +32,6 @@ class Feeling extends Component {
   render() {
     return (
       <div>
-        
         <div className='left'>
           <h1 className='leftTitle'>Feeling</h1>
           <h3 className='leftSub'>emotions play an important role in the learning process</h3>
@@ -42,22 +41,20 @@ class Feeling extends Component {
             <h1>How energized do you feel about today's material?</h1>
             <br></br>
             <div>
-            <input onChange={this.radioNow} type='radio' name='feel' id='1' value='1'/>
-            <label for='1'>No Energy</label>
-            <input onChange={this.radioNow} type='radio' name='feel' id='2' value='2'/>
-            <input onChange={this.radioNow} type='radio' name='feel' id='3' value='3'/>
-            <input onChange={this.radioNow} type='radio' name='feel' id='4' value='4'/>
-            <input onChange={this.radioNow} type='radio' name='feel' id='5' value='5'/>
-            <input onChange={this.radioNow} type='radio' name='feel' id='6' value='6'/>
-            <label for='6'>Electric</label>
+              <input onChange={this.radioNow} type='radio' name='feel' id='1' value='1'/>
+              <label for='1'>No Energy</label>
+              <input onChange={this.radioNow} type='radio' name='feel' id='2' value='2'/>
+              <input onChange={this.radioNow} type='radio' name='feel' id='3' value='3'/>
+              <input onChange={this.radioNow} type='radio' name='feel' id='4' value='4'/>
+              <input onChange={this.radioNow} type='radio' name='feel' id='5' value='5'/>
+              <input onChange={this.radioNow} type='radio' name='feel' id='6' value='6'/>
+              <label for='6'>Electric</label>
             </div>
-            <div>{JSON.stringify(this.state)}</div>
-
           </div>
           <div className='nextPath'>
             <button className='cont' onClick={this.continueClicked} id='continueInFeeling' disabled={this.state.feeling === ''}>Continue</button>
           </div>
-          </div>
+        </div>
       </div>
     ); // end return
   } // end render

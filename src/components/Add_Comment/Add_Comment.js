@@ -12,7 +12,7 @@ class Add_Comment extends Component {
 
   reviewClicked = (event) =>{
     event.preventDefault();
-    console.log('continue was clicked');
+    console.log('review was clicked');
     // dispatch value to redux
     this.props.dispatch({
       type: 'SET_FEEDBACK',
@@ -22,21 +22,40 @@ class Add_Comment extends Component {
     this.props.history.push('/review');
   } // end reviewClicked
 
+  commentNow = (event) => {
+    console.log('in commentNow string is: ', event.target.value);
+    this.setState({
+      comments: event.target.value
+    })
+  }
+
   render() {
     return (
       <div>
-        <h1>Comment</h1>
-        <main>
-          <section className='formInfo'>
-            <h3>any comments?</h3>
-          </section>
-          <section className='nextPath'>
-            <button onClick={this.reviewClicked} id='reviewInComment'>Review</button>
-          </section>
-        </main>
+        <div className='left'>
+          <h1 className='leftTitle'>Comments</h1>
+          <h3 className='leftSub'>if I had 53 minutes to spend as I liked I'd walk very slowly toward a water fountain</h3>
+        </div>
+        <div className='wrap'>
+          <div className='inWrap'>
+            <h1>Anything noteworthy about today?</h1>
+            <br></br>
+            <div>
+              <input onChange={this.commentNow} name='comment' id='comment' type='text'/>
+              <label for='comment'>Comment Box</label>
+            </div>
+          </div>
+          <div className='nextPath'>
+            <button className='cont' onClick={this.reviewClicked} id='continueInAdd_Comment'>Continue</button>
+          </div>
+        </div>
       </div>
     ); // end return
   } // end render
 } // end class
 
-export default Add_Comment;
+const putReduxStateOnProps =(reduxState)=>({
+  reduxState
+})
+
+export default connect(putReduxStateOnProps)(Add_Comment);

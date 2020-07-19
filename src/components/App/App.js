@@ -18,6 +18,7 @@ class App extends Component {
         <header className="header">
           <h1 className="title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
+          
         </header>
           <Router>
               <Route exact path="/" component={Start} />

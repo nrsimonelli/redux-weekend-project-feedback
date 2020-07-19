@@ -15,16 +15,16 @@ class Start extends Component {
       <div>
         <div className='left'>
           <h1 className='leftTitle'>Start</h1>
-          <h3 className='leftSub'>are you ready?</h3>
+          <h3 className='leftSub'>everything starts at the beginning</h3>
         </div>
         <div className='wrap'>
           <div className='inWrap'>
-            <h1>Let's Go</h1>
-            <p>question 2</p>
-            <p>question 3</p>
+            <h1>Welcome To The Daily Feedback Form</h1>
+            <h4><i>press start to begin</i></h4>
+            
           </div>
           <div className='nextPath'>
-            <button className='cont' onClick={this.startClicked} id='nextInStart'>Start!</button>
+            <button className='cont' onClick={this.startClicked} id='nextInStart'>Start</button>
           </div>
         </div>  
           

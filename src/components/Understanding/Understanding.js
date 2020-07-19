@@ -31,17 +31,29 @@ class Understanding extends Component {
   render() {
     return (
       <div>
-
-        <h1>Understanding</h1>
-        <main>
-          <section className='formInfo'>
-            <h3>How well do you understand today's material?</h3>
-          </section>
-          <section className='nextPath'>
-            <button onClick={this.continueClicked} id='continueInUnderstanding'>Continue</button>
-          </section>
-        </main>
-
+        <div className='left'>
+          <h1 className='leftTitle'>Understanding</h1>
+          <h3 className='leftSub'>the noblest pleasure is the joy of understanding</h3>
+        </div>
+        <div className='wrap'>
+          <div className='inWrap'>
+            <h1>How well did you understand today's material?</h1>
+            <br></br>
+            <div>
+              <input onChange={this.radioNow} type='radio' name='und' id='1' value='1'/>
+              <label for='1'>Lost</label>
+              <input onChange={this.radioNow} type='radio' name='und' id='2' value='2'/>
+              <input onChange={this.radioNow} type='radio' name='und' id='3' value='3'/>
+              <input onChange={this.radioNow} type='radio' name='und' id='4' value='4'/>
+              <input onChange={this.radioNow} type='radio' name='und' id='5' value='5'/>
+              <input onChange={this.radioNow} type='radio' name='und' id='6' value='6'/>
+              <label for='6'>On point</label>
+            </div>
+          </div>
+          <div className='nextPath'>
+            <button className='cont' onClick={this.continueClicked} id='continueInUnderstanding' disabled={this.state.understanding === ''}>Continue</button>
+          </div>
+        </div>
       </div>
     ); // end return
   } // end render
