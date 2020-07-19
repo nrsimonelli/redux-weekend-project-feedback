@@ -64,7 +64,10 @@ body {
 .leftSub{
   padding-left: 6%;
   margin-top: 33%;
+  margin-right: 20px;
+  line-height: 1.4;
   font-style: italic;
+  font-size: 20px;
 }
 
 
@@ -74,16 +77,19 @@ body {
   position: relative;
   margin-right: 6%;
   margin-top: 25vh;
+  position: fixed;
+  bottom: 1rem;
+  right: -1rem;
   
 }
 .cont{
-  position: relative;
   border-radius: 4px;
   font-size: 16px;
   background-color: var(--highlight);
   padding: 6px 15px;
 
 }
+
 
 
 

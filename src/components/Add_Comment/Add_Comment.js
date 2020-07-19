@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 
 
 class Add_Comment extends Component {
 
-  reviewClicked = () =>{
+  state = {
+    comments: ''
+   
+  }
+
+  reviewClicked = (event) =>{
+    event.preventDefault();
+    console.log('continue was clicked');
+    // dispatch value to redux
+    this.props.dispatch({
+      type: 'SET_FEEDBACK',
+      payload: this.state
+    });
     // takes you to the review page
-    console.log('review was clicked');
     this.props.history.push('/review');
   } // end reviewClicked
 

@@ -15,7 +15,7 @@
     - [x] review
 - [x] commit code
 
-## Routes ##
+## <Routes /> ##
 - [x] Outline routes in app.js
 - [x] definte path names for each component
 - [x] import each component
@@ -27,23 +27,34 @@
 - [x] commit and comment
 
 ## Form ##
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] radio buttons
+- [ ] css for spacing
+- [ ] assign values
+- [ ] comment section 
+- [ ] data validation
 
-## Redux ##
-- [ ] npm install
-- [ ] import store
-- [ ] import provider
+## Redux Setup ##
+- [x] npm install
+- [x] logger
+- [x] import store
+- [x] import provider
+- [x] create store instance
+- [x] combine reducers
 
 ## CSS ##
-- [ ] decide on color pallet
-- [ ] set primary colors
-- [ ] set secondary colors
-- [ ] set button color
-- [ ] set text color
+- [x] decide on color pallet
+- [x] set primary colors
+- [x] set secondary colors
+- [x] set button color
+- [x] set text color
 - [ ] fix button position
 
 ## On Submit ##
-- [ ] POST request to send data to database
+- [ ] POST request to send feedback to database
+- [ ] Review page has entire feedback laid out
+- [ ] write express routes from server to router to db
+
+## page handlers ##
+- [ ] state updated on change
+- [ ] results dispatched to 'global state'
+- [ ] button disabled till information entered 

@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 
 
 class Support extends Component {
 
-  continueClicked = () =>{
-    // takes you to comments
+  state = {
+    support: ''
+   
+  }
+
+  continueClicked = (event) =>{
+    event.preventDefault();
     console.log('continue was clicked');
+    // pushes support value up to redux
+    this.props.dispatch({
+      type: 'SET_FEEDBACK',
+      payload: this.state
+    });
+    // takes you to comments
+    
     this.props.history.push('/add_comment');
   } // end continueClicked
 

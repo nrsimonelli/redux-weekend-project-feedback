@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 
 
 class Review extends Component {
@@ -27,4 +28,8 @@ class Review extends Component {
   } // end render
 } // end class
 
-export default Review;
+const putReduxStateOnProps =(reduxState)=>({
+  reduxState
+})
+
+export default connect(putReduxStateOnProps)(Review);

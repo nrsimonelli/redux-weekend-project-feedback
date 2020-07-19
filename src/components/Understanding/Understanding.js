@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux'
 
 
 class Understanding extends Component {
 
-  continueClicked = () =>{
-    // takes you to support component
+  state = {
+    understanding: ''
+  }
+
+  continueClicked = (event) => {
+    event.preventDefault();
     console.log('continue was clicked');
+    // pushes understanding value up to redux
+    this.props.dispatch({
+      type: 'SET_FEEDBACK',
+      payload: this.state
+    });
+    // takes you to support component
     this.props.history.push('/support');
   } // end continueClicked
+
+  radioNow = (event) => {
+    console.log('in radioNow with value: ', event.target.value);
+    this.setState({
+      understanding: event.target.value
+    })
+  } // end radioNow
 
   render() {
     return (
       <div>
+
         <h1>Understanding</h1>
         <main>
           <section className='formInfo'>
@@ -22,9 +41,14 @@ class Understanding extends Component {
             <button onClick={this.continueClicked} id='continueInUnderstanding'>Continue</button>
           </section>
         </main>
+
       </div>
     ); // end return
   } // end render
 } // end class
 
-export default Understanding;
+const putReduxStateOnProps =(reduxState)=>({
+  reduxState
+})
+
+export default connect(putReduxStateOnProps)(Understanding);

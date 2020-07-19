@@ -8,10 +8,10 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger'
 
 // first reducer
-const feelReducer = ( state = [], action ) => {
+const feedbackReducer = ( state = [], action ) => {
 
-    if (action.type === 'SET_FEEL'){
-        console.log('in feels reducer', action.payload);
+    if (action.type === 'SET_FEEDBACK'){
+        console.log('in feedback reducer', action.payload);
         
         return [...state, action.payload]
     }
@@ -21,7 +21,7 @@ const feelReducer = ( state = [], action ) => {
 // created store for reducers to run on dispatch
 const storeInstance = createStore(
     combineReducers({
-        feelReducer
+        feedbackReducer
         
     }),
     applyMiddleware(logger)

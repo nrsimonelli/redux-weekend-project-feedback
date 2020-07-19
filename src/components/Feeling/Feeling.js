@@ -6,23 +6,28 @@ import {connect} from 'react-redux';
 class Feeling extends Component {
 
   state = {
-    currentFeedback: {feeling: '', understanding: '', support: '', comments: ''}
+    feeling: ''
    
   }
 
-  continueClicked = () =>{
-    // takes you to next page (understanding)
+  continueClicked = (event) => {
+    event.preventDefault();
     console.log('continue was clicked');
+    // pushes form info up to redux
+    this.props.dispatch({
+      type: 'SET_FEEDBACK',
+      payload: this.state
+    });
+    // takes you to next page (understanding)
     this.props.history.push('/understanding');
   } // end continueClicked
 
-  radioNow = (event) =>{
-    console.log('in radio now with value: ', event.target.value);
+  radioNow = (event) => {
+    console.log('in radioNow with value: ', event.target.value);
     this.setState({
-      ...this.state.currentFeedback,
       feeling: event.target.value
     })
-  }
+  } // end radioNow
 
   render() {
     return (
@@ -46,11 +51,11 @@ class Feeling extends Component {
             <input onChange={this.radioNow} type='radio' name='feel' id='6' value='6'/>
             <label for='6'>Electric</label>
             </div>
-            
+            <div>{JSON.stringify(this.state)}</div>
 
           </div>
           <div className='nextPath'>
-            <button className='cont' onClick={this.continueClicked} id='continueInFeeling'>Continue</button>
+            <button className='cont' onClick={this.continueClicked} id='continueInFeeling' disabled={this.state.feeling === ''}>Continue</button>
           </div>
           </div>
       </div>
